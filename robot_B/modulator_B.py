@@ -42,6 +42,10 @@ def modulator_B(campaign,SETTINGS):
 		SETTINGS['linked_password']='linkedin999'
 		SETTINGS['sheet_name']='backupmf4'	
 
+	if campaign == '_ariLID1_':
+		SETTINGS['sheet_name']='_ariLID1_'
+
+
 	# Load data
 	print('\n mod_B @ %s: Loading Data'%campaign)
 	gDict = g_read(SETTINGS)
@@ -67,5 +71,28 @@ def modulator_B(campaign,SETTINGS):
 
 if __name__=="__main__":
 	
+	SETTINGS = {'campaigns':['_ariLID1_'],
+			"location_cd":"C:/Users/Dan/webdrivers/chromedriver_win32/chromedriver.exe",
+			'linked_login_url': "https://www.linkedin.com/uas/login?",
+			'linked_connections_url':"https://www.linkedin.com/mynetwork/invite-connect/connections/",
+			'linked_messages_url':'https://www.linkedin.com/messaging/',
+			'linked_username':"arilaniado@gmail.com",
+			'linked_password':"Marketforce11",
+			'spread_name':"Ari_LID",
+			'aux_spreads':['ariLID1'],
+			#'active_login':'https://www.activecampaign.com/login/',
+			#'linkedA1.ahk loc':"C:/Users/Dan/Desktop/Python/marketforce_code/robot_A/linkedA1.ahk",
+			#'linkedA2.ahk loc':"C:/Users/Dan/Desktop/Python/marketforce_code/robot_A/linkedA2.ahk",
+			#'ahkexe loc':"C:/Program Files/AutoHotkey/AutoHotkey.exe",
+			'linkhelp_username':"eric@marketforce.ca",
+			'linkhelp_password':"Ilovecottage6!!link",
+			#'invitemax':95,
+			#'download_folder':"C:/Users/Dan/Downloads",
+			#'linkhelp_backup.txt loc':'C:/Users/Dan/Desktop/Python/marketforce_code/robot_A/LinkedHelper Backups/backup.txt',
+            'servitor':'',
+            'servitor_fname':'',
+			'msg2_body':'',
+			'msg3_body':''}
 
-	modulator_B('_MF1_')
+	modulator_B('_ariLID1_',SETTINGS)
+

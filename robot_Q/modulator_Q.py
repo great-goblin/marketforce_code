@@ -18,7 +18,7 @@ def modulator_Q(SETTINGS):
 if __name__=="__main__":
 	
 	SETTINGS = {"campaigns":["_MF1_","_MF2_","_MF3_","_MF4_"],
-				"location_cd":"C:/Users/steve/Downloads/chromedriver.exe",
+				"location_cd":"C:/Users/Dan/webdrivers/chromedriver_win32/chromedriver.exe",
 				'linked_login_url': "https://www.linkedin.com/uas/login?",
 				'linked_connections_url':"https://www.linkedin.com/mynetwork/invite-connect/connections/",
 				'linked_username':'',

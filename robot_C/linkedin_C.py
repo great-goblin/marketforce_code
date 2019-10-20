@@ -74,6 +74,7 @@ def getmessages(SETTINGS):
 	sleep(5)
 
 	#Get Conversations (scroll down three times)
+	print('Building biglist')
 	biglist = driver.find_elements_by_xpath("//div/div[1]/div/div[1]/ul/*")
 	driver.execute_script("arguments[0].scrollIntoView();",biglist[-2])
 	biglist2 = driver.find_elements_by_xpath("//div/div[1]/div/div[1]/ul/*")
@@ -81,14 +82,16 @@ def getmessages(SETTINGS):
 	biglist3 = driver.find_elements_by_xpath("//div/div[1]/div/div[1]/ul/*")
 	driver.execute_script("arguments[0].scrollIntoView();",biglist3[-2])
 	biglist4 = driver.find_elements_by_xpath("//div/div[1]/div/div[1]/ul/*")
-	
+	print('Biglist built')
 	clist = []
 
 	#Retrieve most recent ~100 conversations
+	print('Building CLIST')
 	for index in range(len(biglist4)):
 		clist.append("//div/div[1]/div/div[1]/ul/li[%s]/div/a/div[2]/div[2]/p/span/span"%(index+1))
-	clist=clist[1:-1]
 
+	clist=clist[1:-1]
+	print('CLIST built')
 	#Scroll down
 
 	
@@ -96,17 +99,26 @@ def getmessages(SETTINGS):
 
 	messages=[]
 	for convo in clist:
-		clickx(convo)
-		sleep(2)
-		listx=driver.find_elements_by_xpath("//div[4]/div/ul/*")
-		listx=listx[2:]
-		dialogue = []
-		for index in range(len(listx)):
-			try:
-				dialogue.append(getx('//div[4]/div/ul/li[%s]/div/div[1]/a/span'%(index+2)))
-			except:
-				pass
+		passval = 1
+		try: 
+			clickx(convo)
+		except: 
+			print('Cant click this shit')
+			passval = 0
+		
 
-		messages.append([getx('//*/dl/dt/h2'),dialogue]	)
+		sleep(2)
+
+		if passval == 1:
+			listx=driver.find_elements_by_xpath("//div[4]/div/ul/*")
+			listx=listx[2:]
+			dialogue = []
+			for index in range(len(listx)):
+				try:
+					dialogue.append(getx('//div[4]/div/ul/li[%s]/div/div[1]/a/span'%(index+2)))
+				except:
+					pass
+
+			messages.append([getx('//*/dl/dt/h2'),dialogue]	)
 	driver.close()
 	return messages

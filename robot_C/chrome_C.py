@@ -51,12 +51,23 @@ def push2sheets(dictionary,SETTINGS):
 	c2 = pd.DataFrame(np.asarray(kf[:,4]))
 	s.df_to_sheet(c2,index=False,headers=False,sheet=sheet_name,start='K3')
 
-	m3 = pd.DataFrame(np.asarray(kf[:,5]))
-	s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='N3')
+	if SETTINGS['campaigns'][0]=='_ariLID1_':
+		m3 = pd.DataFrame(np.asarray(kf[:,5]))
+		s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='M3')
 
-	c3 = pd.DataFrame(np.asarray(kf[:,6]))
-	s.df_to_sheet(c3,index=False,headers=False,sheet=sheet_name,start='O3')
+		c3 = pd.DataFrame(np.asarray(kf[:,6]))
+		s.df_to_sheet(c3,index=False,headers=False,sheet=sheet_name,start='N3')
 
-	d = pd.DataFrame(np.asarray(kf[:,7]))
-	s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='P3')
+		d = pd.DataFrame(np.asarray(kf[:,7]))
+		s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='O3')
+
+	else:
+		m3 = pd.DataFrame(np.asarray(kf[:,5]))
+		s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='N3')
+
+		c3 = pd.DataFrame(np.asarray(kf[:,6]))
+		s.df_to_sheet(c3,index=False,headers=False,sheet=sheet_name,start='O3')
+
+		d = pd.DataFrame(np.asarray(kf[:,7]))
+		s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='P3')
 

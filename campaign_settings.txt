@@ -1,0 +1,97 @@
+CAMPAIGNS:_MF1_,_MF2_,_MF3_,_MF4_,_ariLID1_,_MF5_
+
+starttime:9
+endtime:17
+
+_MF1_.linked_username:stephane@fullview.ca
+_MF1_.linked_password:Marketforce999!
+_MF1_.spread_name:Marketforce_Manager_Automated
+_MF1_.sheet_name:_MF1_
+_MF1_.aux_spreads:none
+_MF1_.A2:off
+_MF1_.B:bad
+_MF1_.C:good
+_MF1_.R:off
+_MF1_.Q:off
+_MF1_.m2:Our team is impressed by your work. Would you be open to a podcast interview?
+_MF1_.m3:We'd like to host you on a short podcast interview. Thoughts?
+_MF1_.servitor:Stephane Trottier
+_MF1_.servitor_fname:Stephane
+
+_MF2_.linked_username:dan@mediawize.ca
+_MF2_.linked_password:linkedin999
+_MF2_.spread_name:Marketforce_Manager_Automated
+_MF2_.sheet_name:_MF2_
+_MF2_.aux_spreads:none
+_MF2_.A2:off
+_MF2_.B:bad
+_MF2_.C:good
+_MF2_.R:good
+_MF2_.Q:off
+_MF2_.m2:Our team is impressed by your work. Would you be open to a podcast interview?
+_MF2_.m3:We'd like to host you on a short podcast interview. Thoughts?
+_MF2_.servitor:Dan Goulet
+_MF2_.servitor_fname:Dan
+
+_MF3_.linked_username:stephane@fullview.ca
+_MF3_.linked_password:Marketforce999!
+_MF3_.spread_name:Marketforce_Manager_Automated
+_MF3_.sheet_name:_MF3_
+_MF3_.aux_spreads:MF3_aux
+_MF3_.A2:off
+_MF3_.B:off
+_MF3_.C:off
+_MF3_.R:off
+_MF3_.Q:off
+_MF3_.m2:Our team is impressed by your work. Would you be open to a podcast interview?
+_MF3_.m3:We'd like to host you on a short podcast interview. Thoughts?
+_MF3_.servitor:Stephane Trottier
+_MF3_.servitor_fname:Stephane
+
+
+_MF4_.linked_username:dan@mediawize.ca
+_MF4_.linked_password:linkedin999
+_MF4_.spread_name:Marketforce_Manager_Automated
+_MF4_.sheet_name:_MF4_
+_MF4_.aux_spreads:MF4_aux
+_MF4_.A2:off
+_MF4_.B:off
+_MF4_.C:off
+_MF4_.R:off
+_MF4_.Q:off
+_MF4_.m2:Our team is impressed by your work. Would you be open to a podcast interview?
+_MF4_.m3:We'd like to host you on a short podcast interview. Thoughts?
+_MF4_.servitor:Dan Goulet
+_MF4_.servitor_fname:Dan
+
+_ariLID1_.linked_username:arilaniado@gmail.com
+_ariLID1_.linked_password:Marketforce11
+_ariLID1_.spread_name:Ari_LID
+_ariLID1_.sheet_name:_ariLID1_
+_ariLID1_.aux_spreads:ariLID1_aux
+_ariLID1_.A2:off
+_ariLID1_.B:off
+_ariLID1_.C:off
+_ariLID1_.R:off
+_ariLID1_.Q:off
+_ariLID1_.m2:It is great to connect. To briefly introduce myself, I’m a co-founder of the Colliers Venture Workspace Team. We work with ventures to optimize existing workspace and create strategies that align future spaces to growth. If you are open to chatting, I would be happy to share some insight and would love to learn more about your team's workspace strategy. Would you be open to setting up a time to chat?
+_ariLID1_.m3:Employees are becoming increasingly demanding of their organization’s workspace and culture. We help ventures optimize and secure workspace that provides value-add to their business. Have you thought about how your workspace by your team? Let me know if you would be open to a 10 minute call. 647-823-7088
+_ariLID1_.servitor:Ari Laniado
+_ariLID1_.servitor_fname:Ari
+
+_MF5_.linked_username:stephane@fullview.ca
+_MF5_.linked_password:Marketforce999!
+_MF5_.spread_name:Marketforce_Manager_Automated
+_MF5_.sheet_name:_MF5_
+_MF5_.aux_spreads:MF5_aux
+_MF5_.A2:off
+_MF5_.B:bad
+_MF5_.C:good
+_MF5_.R:off
+_MF5_.Q:off
+_MF5_.m2:Our team is impressed by your work. Would you be open to a podcast interview?
+_MF5_.m3:We'd like to host you on a short podcast interview. Thoughts?
+_MF5_.servitor:Stephane Trottier
+_MF5_.servitor_fname:Stephane
+
+

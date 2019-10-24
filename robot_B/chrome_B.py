@@ -5,15 +5,12 @@ chrome_B: gets spreadsheet, updates spreadsheet (with connection status)
 
 '''
 
-def g_read(SETTINGS):
+def g_read(spread_name,sheet_name):
 	#Imports
 	import pandas as pd
 	from gspread_pandas import Spread
 	import numpy as np
 
-	#Vars
-	spread_name = SETTINGS['spread_name']
-	sheet_name = SETTINGS['sheet_name']
 
 	#Instantiate
 	s = Spread(spread_name)									#This grabs the entire spreadsheet document and injects it into "s"
@@ -52,15 +49,12 @@ def g_read(SETTINGS):
 
 
 # I submit updated dictionaries to a specific Google Sheet.
-def g_write(gDict_updated,SETTINGS):
+def g_write(gDict_updated,spread_name,sheet_name):
 	#Imports
 	import pandas as pd
 	from gspread_pandas import Spread
 	import numpy as np
 
-	#Vars
-	spread_name = SETTINGS['spread_name']
-	sheet_name = SETTINGS['sheet_name']
 	
 	#Instantiate
 	s = Spread(spread_name)
@@ -77,6 +71,6 @@ def g_write(gDict_updated,SETTINGS):
 	df_1 = pd.DataFrame(np.asarray(gList_1))
 
 	#Inject df back into Google Sheet
-	s.df_to_sheet(df_0,index=False,headers=False,sheet=sheet_name,start='B3') ##For bug testing. Places list of names next to other list of names.
+	s.df_to_sheet(df_0,index=False,headers=False,sheet=sheet_name,start='B3')
 	s.df_to_sheet(df_1,index=False,headers=False,sheet=sheet_name,start='F3')
 

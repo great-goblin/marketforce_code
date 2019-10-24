@@ -2,7 +2,7 @@
 I update google sheets
 '''
 
-def push2sheets(dictionary,SETTINGS):
+def push2sheets(dictionary,spread_name,sheet_name):
 
 	#Imports
 	import pandas as pd
@@ -10,9 +10,6 @@ def push2sheets(dictionary,SETTINGS):
 	import numpy as np
 	import datetime
 
-	#Vars
-	spread_name = SETTINGS['spread_name']
-	sheet_name = SETTINGS['sheet_name']
 
 	s = Spread(spread_name)									#This grabs the entire spreadsheet document and injects it into "s"
 	s.open_sheet(sheet_name)								#This selects just one tab-sheet
@@ -51,23 +48,12 @@ def push2sheets(dictionary,SETTINGS):
 	c2 = pd.DataFrame(np.asarray(kf[:,4]))
 	s.df_to_sheet(c2,index=False,headers=False,sheet=sheet_name,start='K3')
 
-	if SETTINGS['campaigns'][0]=='_ariLID1_':
-		m3 = pd.DataFrame(np.asarray(kf[:,5]))
-		s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='M3')
+	m3 = pd.DataFrame(np.asarray(kf[:,5]))
+	s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='N3')
 
-		c3 = pd.DataFrame(np.asarray(kf[:,6]))
-		s.df_to_sheet(c3,index=False,headers=False,sheet=sheet_name,start='N3')
+	c3 = pd.DataFrame(np.asarray(kf[:,6]))
+	s.df_to_sheet(c3,index=False,headers=False,sheet=sheet_name,start='O3')
 
-		d = pd.DataFrame(np.asarray(kf[:,7]))
-		s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='O3')
-
-	else:
-		m3 = pd.DataFrame(np.asarray(kf[:,5]))
-		s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='N3')
-
-		c3 = pd.DataFrame(np.asarray(kf[:,6]))
-		s.df_to_sheet(c3,index=False,headers=False,sheet=sheet_name,start='O3')
-
-		d = pd.DataFrame(np.asarray(kf[:,7]))
-		s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='P3')
+	d = pd.DataFrame(np.asarray(kf[:,7]))
+	s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='P3')
 

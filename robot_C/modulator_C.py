@@ -1,7 +1,7 @@
 """
 Checks Linkedin messages
 """
-def modulator_C(campaign,SETTINGS):
+def modulator_C(self,campaign,linked_username,linked_password,spread_name,sheet_name,servitor,servitor_fname):
 
     #Imports
     print('\n mod_C @ %s: Importing'%campaign)
@@ -12,43 +12,14 @@ def modulator_C(campaign,SETTINGS):
     print('\n mod_C @ %s: Defining Variables'%campaign)
 
 
-    if campaign=='_MF1_':
-        SETTINGS['linked_username']='stephane@fullview.ca'
-        SETTINGS['linked_password']='Marketforce999!'
-        SETTINGS['sheet_name']='_MF1_'
-        SETTINGS['servitor']='Stephane Trottier'
-        SETTINGS['servitor_fname']='Stephane'
+    
 
-    if campaign=='_MF2_':
-        SETTINGS['linked_username']='dan@mediawize.ca'
-        SETTINGS['linked_password']='linkedin999'
-        SETTINGS['sheet_name']='_MF2_'
-        SETTINGS['servitor']='Dan Goulet'
-        SETTINGS['servitor_fname']='Dan'
-
-    if campaign=='_MF3_':
-        SETTINGS['linked_username']='stephane@fullview.ca'
-        SETTINGS['linked_password']='Marketforce999!'
-        SETTINGS['sheet_name']='_MF3_'
-        SETTINGS['servitor']='Stephane Trottier'
-        SETTINGS['servitor_fname']='Stephane'
-
-    if campaign=='_MF4_':
-        SETTINGS['linked_username']='dan@mediawize.ca'
-        SETTINGS['linked_password']='linkedin999'
-        SETTINGS['sheet_name']='_MF4_'
-        SETTINGS['servitor']='Dan Goulet'
-        SETTINGS['servitor_fname']='Dan'
-
-
-
-    servitor = SETTINGS['servitor']
     m = len(servitor)
     
 
     #Load data
     print('\n mod_C @ %s: Loading Data'%campaign)
-    messages = getmessages(SETTINGS)
+    messages = getmessages(self,linked_username,linked_password)
     for message in messages:
         if len(message[1])==0:
             print('ALERT! Conversation with %s unsuccessfully retrieved.'%message[0])
@@ -105,10 +76,5 @@ def modulator_C(campaign,SETTINGS):
 
     #Output data
     print('\n mod_C @ %s: Outputting Data'%campaign)
-    push2sheets(cdct,SETTINGS)
+    push2sheets(cdct,spread_name,sheet_name)
     print('\n mod_C @ %s: Program Complete.'%campaign)
-
-if __name__=="__main__":
-
-
-    modulator_C('Dan')

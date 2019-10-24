@@ -42,7 +42,7 @@ def getx(xpath):
 def findx(xpath):
 	return driver.find_element_by_xpath(xpath)
 
-def getmessages(SETTINGS):
+def getmessages(self,user,password):
 	#Imports
 	from selenium import webdriver 						#this module automatically starts and controls a Chrome web session
 	from selenium.webdriver.common.keys import Keys    #this module helps us input automatic login data
@@ -51,11 +51,9 @@ def getmessages(SETTINGS):
 	import re
 
 	#Vars
-	location = SETTINGS['location_cd']
-	login_url = SETTINGS['linked_login_url']
-	target_url = SETTINGS['linked_messages_url']
-	user = SETTINGS['linked_username']
-	password = SETTINGS['linked_password']
+	location = self.location_cd
+	login_url = self.linked_login_url
+	target_url = self.linked_messages_url
 
 	#Initialize
 	global driver

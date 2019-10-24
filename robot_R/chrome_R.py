@@ -2,14 +2,11 @@
 Pulls send message 2? and send message 3? status from GSHEET
 '''
 
-def g_detect(SETTINGS):
+def g_detect(spread_name,sheet_name):
 	#Imports
 	import pandas as pd
 	from gspread_pandas import Spread
 	
-	#Aux
-	spread_name = SETTINGS['spread_name']
-	sheet_name = SETTINGS['sheet_name']
 
 	#Load data
 	s = Spread(spread_name)
@@ -29,14 +26,11 @@ def g_detect(SETTINGS):
 	return detections
 
 
-def g_write(m2dm3,SETTINGS):
+def g_write(m2dm3,spread_name,sheet_name):
 	import pandas as pd
 	from gspread_pandas import Spread
 	import numpy as np
-	
-	#Aux
-	spread_name = SETTINGS['spread_name']
-	sheet_name = SETTINGS['sheet_name']
+
 
 	#Load data
 	s = Spread(spread_name)
@@ -66,6 +60,5 @@ def g_write(m2dm3,SETTINGS):
 	s.df_to_sheet(m2,index=False,headers=False,sheet=sheet_name,start='I3')
 
 	s.df_to_sheet(d,index=False,headers=False,sheet=sheet_name,start='J3')
-	
 
 	s.df_to_sheet(m3,index=False,headers=False,sheet=sheet_name,start='N3')
